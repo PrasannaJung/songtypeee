@@ -1,0 +1,146 @@
+#app {
+    display: grid;
+    justify-items: center;
+    background-color: var(--color-primary);
+    font-family: Menlo, monospace;
+}
+
+html{
+    background-color: gray;
+}
+
+body{
+    background-color: var(--color-primary);
+}
+
+
+
+.grid-layout {
+    max-width: 1000px;
+    display: grid;
+    grid-auto-flow: row;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    
+}
+
+:root {
+    --color-primary: #333; 
+    --color-secondary: #e2b714;
+    --color-tertiary: #1f2022;
+    --color-iconstext: #646669;
+    --color-iconstext-hover: #d1d0c5;
+    --color-text: white;
+    --color-logo: #d1d0c5;
+    --color-selected: #e2b714;;
+    --color-error: red;
+    --color-randomwords: #4a4c50; 
+}
+
+
+.dark {
+    --color-primary: #333; 
+    --color-secondary: #e2b714;
+    --color-tertiary: #101111;
+    --color-iconstext: #646669;
+    --color-iconstext-hover: #d1d0c5;
+    --color-incorrect-letter: red;
+    --color-correct-letter: #d1d0c5;
+}
+  
+.light {
+    --color-primary: #ddd;
+    --color-secondary: #333;
+    --color-tertiary: #aaa7a7;
+    --color-iconstext: #4d4d4d;
+    --color-iconstext-hover: black;
+    --color-incorrect-letter: red;
+    --color-correct-letter: black;
+
+}
+
+.vscode {
+    --color-primary: #333;
+    --color-secondary: #007acc;
+    --color-tertiary: #2c2e31;
+    --color-iconstext: #646669;
+    --color-iconstext-hover: #ddd;
+    --color-incorrect-letter: red;
+    --color-correct-letter: #ddd;
+
+}
+  
+.trance {
+    --color-primary: #00021b;
+    --color-secondary: #e51376;
+    --color-tertiary: #18214c;
+    --color-iconstext: #637199;
+    --color-iconstext-hover: white;
+    --color-incorrect-letter: #02d3b0;
+    --color-correct-letter: #e51376;
+
+    .letter.correct, .acc-wpm-value, .stats-bottom {
+        animation: trance 5s linear infinite;
+    };
+}
+  
+.eva-04 {
+    --color-primary: #6d45a1;
+    --color-secondary: #501a97;
+    --color-tertiary: #226126;
+    --color-iconstext: white;
+    --color-iconstext-hover: #73d378;
+    --color-incorrect-letter: red;
+    --color-correct-letter: #73d378;
+}
+
+
+.sewing-tin{
+ 
+    --color-primary: #2a277a;
+    --color-secondary: #341acb;
+    --color-tertiary: #446ad5;
+    --color-iconstext: #cabb9a;
+    --color-iconstext-hover: #03b9de;
+    --color-incorrect-letter: red;
+    --color-correct-letter: #03b9de;  
+}
+
+.shadow {
+    --color-primary: #000;
+    --color-secondary: #557d8d;
+    --color-tertiary: #101111;
+    --color-iconstext: #646669;
+    --color-iconstext-hover: #d1d0c5;
+    --color-correct-letter: #eee;
+    --color-incorrect-letter: red;
+
+
+  
+}
+
+
+
+
+
+
+@keyframes trance {
+    0% {
+      color: #e51376;
+    }
+    50% {
+      color: #0e77ee;
+    }
+    100% {
+      color: #e51376;
+    }
+  }
+
+
+
+  

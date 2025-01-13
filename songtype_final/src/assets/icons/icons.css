@@ -1,0 +1,120 @@
+.icon-keyboard {
+    width: 40px;
+    height: auto;
+    fill: var(--color-secondary);
+}
+
+.icons-header {
+    fill: var(--color-iconstext);
+    width: 20px;
+    height: 20px;
+    transition: all 300ms linear;
+}
+
+@media (max-width: 400px) {
+    .icons-header {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.icons-header:hover {
+    fill: var(--color-iconstext-hover);   
+}
+
+.icons-notification-modal {
+    fill: var(--color-iconstext);
+    width: 20px;
+    height: 20px;
+    transition: all 300ms linear;
+}
+
+.icons-footer {
+    fill: var(--color-iconstext);
+    width: 12px;
+    height: auto;
+    transition: all 300ms linear;
+
+}
+
+.icons-about {
+    fill: var(--color-iconstext-hover);
+    width: 30px;
+    height: auto;
+    transition: all 300ms linear;
+}
+
+.volume:hover {
+    fill: var(--color-iconstext-hover);
+}
+
+
+.icons-game-mode {
+    margin-top: 1px;
+    width: 12px;
+    height: auto;
+    transition: all 300ms linear;
+
+
+}
+
+.icons-punctuation {
+    margin-top: 1px;
+    width: 12px;
+    height: auto;
+    transition: all 300ms linear;
+}
+
+.icons-result {
+    fill: var(--color-iconstext);
+    width: 18px;
+    height: auto; 
+    transition: all 300ms linear;
+}
+
+.icons-zen-result {
+    fill: var(--color-iconstext);
+    width: 18px;
+    height: auto; 
+
+}
+
+.icons-result:hover {
+    fill: var(--color-iconstext-hover);
+}
+
+
+.icons-header {
+    fill: var(--color-iconstext);
+    width: 20px;
+    height: 20px;
+    transition: all 300ms linear;
+}
+
+
+
+.icons-header:hover {
+    fill: var(--color-iconstext-hover);   
+}
+
+
+/* INDIVIDUAL SIZE FOR EACH ICON */
+.settings-icon {
+    width: 17px;
+    height: auto;
+}
+
+.info-icon {
+    width: 7px;
+    height: auto;
+}
+
+.bell-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+

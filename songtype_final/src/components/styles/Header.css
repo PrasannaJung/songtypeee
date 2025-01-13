@@ -1,0 +1,89 @@
+.header {
+    font-size: 36px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--color-text);
+    width: 100%;
+    user-select: none;
+}
+
+
+header .keyboard-icon {
+    margin-top: 6px;
+     
+}
+
+header .header-title {
+    display: none; /* Hide the header */
+    cursor: pointer;
+}
+
+/* Media query */
+@media (min-width: 640px) {
+    header .header-title{
+        display: flex; /* Display the header */
+        text-align: center;
+        justify-content: center;
+        
+    }
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    margin-left: 8px;
+    flex: 1;
+}
+
+@media (max-width: 400px) {
+    .header-icons {
+        gap: 6px;
+    }
+}
+
+.profile-icons{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-username{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New";
+    font-size: 16px;
+    color: var(--color-iconstext);
+    letter-spacing: 0.1px;
+    text-transform: lowercase;
+
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-icon span {
+    transition: all 300ms linear;
+}
+
+
+.group:hover .profile-icon, .group:hover .header-username{
+    fill: var(--color-iconstext-hover);
+    color: #e2b714;
+}
+
+.header-button-div {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.header-button-div:hover .icons-header {
+    fill: var(--color-iconstext-hover)
+}
+
+
+

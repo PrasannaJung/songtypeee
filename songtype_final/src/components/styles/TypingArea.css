@@ -1,0 +1,114 @@
+.timer {
+    font-size: 24px;
+    color: var(--color-secondary);
+}
+
+
+.typing-area{
+    font-family: Menlo, monospace;
+    justify-content: left;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    animation: fade 0.5s ease-in-out;
+}   
+
+.typing-area-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    user-select: none;
+}
+
+.blur-wrapper {
+    position: relative;
+    min-width: 100%;
+  }
+
+.words-wrapper {
+  height: 120px;
+  overflow: hidden;
+  min-height: 120px;
+}
+
+.words-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--color-iconstext);
+    font-size: 1.5rem;
+    overflow: hidden;
+    min-width: 100%;
+    
+}
+
+.word {
+    line-height: 1em;
+    margin: 0.25em;
+    border-bottom: 2px solid transparent;
+}
+
+.letter {
+    color: var(--color-iconstext);
+    position: relative;
+
+    &.active::before {
+        content: '|';
+        color: var(--color-secondary);
+        font-size: 1.5rem;
+        position: absolute;
+        left: -65%;
+        animation: 1.2s blink infinite ease-in-out;
+      }
+
+    &.active.is-last::before {
+        left: 65%;
+    }
+  
+}
+
+.letter.correct {
+    color: var(--color-correct-letter);
+}
+
+.letter.incorrect {
+    color: var(--color-incorrect-letter);
+}
+
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+@keyframes blink {
+
+    0%,
+    25% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 0;
+    }
+  }
+
+
+
+  .blurred {
+    animation: setblur 0.5s ease-in-out 1s both;
+  }
+
+  @keyframes setblur {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(5px);
+    }
+}
