@@ -9,6 +9,7 @@ import Settings from "./pages/settings/Settings";
 import Leaderboard from "./pages/leaderboard/Leaderboard";
 import SignUpPage from "./components/AuthForm/Signupform";
 import Profile from "./pages/profile/profile";
+import ProtectedRoute from "./pages/ProtectedPage";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -22,7 +23,10 @@ function App() {
           element={authUser ? <Navigate to='/dashboard' /> : <Login />}
         />
         <Route path='/about' element={<About />} />
-        <Route path='/profile' element={<Profile />} />
+
+        <Route element={<ProtectedRoute />}>
+          <Route path='/profile' element={<Profile />} />
+        </Route>
         <Route path='/settings' element={<Settings />} />
         <Route path='/leaderboard' element={<Leaderboard />} />
         <Route path='/signup' element={<SignUpPage />} />

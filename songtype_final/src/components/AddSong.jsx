@@ -19,10 +19,15 @@ const AddSong = () => {
   const [songLyrics, setSongLyrics] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [addErrMessage, setAddErrMessage] = useState("");
   // const [isSearchPopupOpen, setIsSearchPopupOpen] = useState(false);
 
   // Handle adding a new song
   const handleAddSong = () => {
+    if (!songName || !songLyrics) {
+      setAddErrMessage("Please enter song name and lyrics both");
+      return;
+    }
     const newSong = { songName, songLyrics };
     addSongApi(newSong)
       .then((response) => {
@@ -125,10 +130,7 @@ const AddSong = () => {
                 ))}
               </div>
               <div className='popup-buttons'>
-                <button
-                  onClick={() => setIsSearchPopupOpen(false)}
-                  className='popup-button-cancel'
-                >
+                <button onClick={stopSearching} className='popup-button-cancel'>
                   Close
                 </button>
               </div>
